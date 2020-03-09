@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,900&display=swap');
+body{
+    font-family: 'Raleway', sans-serif;
+    margin:0;
+}
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+header{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    z-index: 10;
+}
+header .logo{
+    float: left;
+}
+header .logo a{
+    font-size: 30px;
+    display: inline-block;
+    padding: 5px 0px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+header .logo a span{
+    color: #f3971b;
+}
+header .navbar{
+    float: right;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .navbar ul li{
+    display: inline;
+    padding: 0 15px;
+}
+header .navbar ul li a{
+    display: inline-block;
+    padding: 10px 0px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+}
+
+header .navbar ul li a::before{
+    content: "";
+    position: absolute;
+    top:100%;
+    margin-top: -5%;
+    height: 2px;
+    left: 0px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.home{
+    min-height: 100vh;
+    background-image: url("images/adventure-alps-background.jpg");
+    background-size: cover;
+    background-position: center;
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.home::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+.home .home-text{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: auto;
+    z-index: 10;
+}
+
+.home .home-text h1{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 10px 0px;
+    font-weight: 300;
+    animation: slideLeft 1.5s ease;
+}
+.home .home-text h3{
+    font-size: 25px;
+    color: #f3971b;
+    margin: 15px 0px 0px;
+    font-weight: 400;
+    animation: slideRight 1.5s ease;
+}
+.home .home-text h3 a{
+    color: #ffffff;
+}
+
+@keyframes slideLeft{
+    0%{transform: translateX(-100%); opacity: 0;}
+    100%{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes slideRight{
+    0%{transform: translateX(100%); opacity: 0;}
+    100%{transform: translateX(0); opacity: 1;}
+}
